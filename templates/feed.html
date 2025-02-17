@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Feed
+{% endblock %}
+
+{% block main %}
+    <div class="feed-container">
+        <ul class="feed-list">
+            {% for upload in uploads %}
+                <li class="feed-item">
+                    <p class="feed-text">{{ upload['text'] }}</p>
+                    {% if upload["photo_path"] %}
+                        <img class="feed-image" src="{{ upload['photo_path'] }}" alt="Uploaded Image">
+                    {% endif %}
+
+                    {% if upload["video_path"] %}
+                        <video class="feed-video" controls>
+                            <source src="{{ upload['video_path'] }}" type="video/mp4">
+                        </video>
+                    {% endif %}
+
+                    <hr class="feed-divider">
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

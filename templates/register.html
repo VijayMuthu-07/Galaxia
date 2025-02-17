@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <div id = "panel">
+        <div class = "wrapper">
+            <h1 class="welcome">Welcome to Galaxia</h1>
+            <div class="login-container">
+                <form action="/register" method="post">
+                    <input name ="username" type="text" placeholder="Username">
+                    <input name="email" type="text" placeholder="Email">
+                    <input name="password" type="password" placeholder="Password">
+                    <input name="verification" type="password" placeholder="re-type Password">
+                    <button class="login-btn">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

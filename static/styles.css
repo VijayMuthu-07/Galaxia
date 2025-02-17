@@ -1,0 +1,584 @@
+body {
+    background-image: url('bg.jpg'); 
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #0c0c0c;
+}
+#panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 200px;
+    font-family: Arial, sans-serif;
+    /*background-image: url(background.jpeg);
+    background-repeat: no-repeat;*/
+}
+.navbar-brand {
+    font-family: "Space Mono", serif ;
+    font-weight: bolder;
+    font-size: 200%;
+    margin-left: 5px;
+    padding-bottom: 1px;
+    padding-top: 5px;
+    margin-top: -5px;
+}
+.nav-item {
+    color: white;
+    margin: 0 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.nav-item:hover {
+    text-decoration: underline;
+}
+.welcome {
+    font-family: "Kanit", serif ;
+    margin-top: 50px;
+    margin-left: 0px;
+    font-size: 32px;
+    font-weight: bolder;
+    color: rgb(0, 0, 0);
+}
+.login-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login-container input {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 50px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.login-btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.login-btn:hover {
+    background-color: #0056b3;
+}
+.wrapper{
+    background-color: #bdbcbc;
+    border-radius: 50px;
+    width: 420px;
+    margin-top: -120px;
+    opacity: 70%;
+}
+.nav-link i {
+    margin-right: 80px;
+    font-size: 80px; /* Adjust as needed */
+    vertical-align: middle;
+}
+.set{
+    font-family: "Kanit", serif;
+    color: #faf6f6;
+    font-size: 40px;
+
+}
+.nav-link.active{
+    font-family: "Space Mono", serif ;
+    color : wheat;
+    padding-bottom: 20px;
+}
+.bear{
+    margin-top: 50px;
+}
+/* Sections Styling */
+.first, .second, .third, .fourth {
+    background-color: #fef9f9b3; /* Darker background for better contrast */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 80%;
+    text-align: center;
+}
+
+/* Section Headings */
+.first h4, .second h4, .third h4, .fourth h4 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f8f7f1; /* Gold color for emphasis */
+    margin-bottom: 10px;
+}
+
+/* Section Content */
+.first p, .second p, .third p, .fourth p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ffffff; /* Solid white text for better readability */
+}
+.d-inline-block.align-text-top{
+    margin-top: 3px;
+    margin-right: -15px
+}
+/*NEWS*/
+/* Common Section Styling */
+#apod-section, #news-section, #spacex-section {
+    padding: 20px;
+    margin: 30px auto;
+    width: 80%;
+    border-radius: 10px;
+}
+
+/* Title Styling */
+.section-title {
+    color: rgb(236, 162, 65);
+    text-align: center;
+    font-family: "Source Code Pro", serif;
+    
+}
+
+/* Sub-title Styling */
+.sub-title {
+    color: lightgray;
+    text-align: center;
+    font-family: "Source Code Pro", serif; ;
+}
+
+/* Paragraphs */
+.description, .news-summary, .news-date, .launch-details {
+    color: white;
+    text-align: center;
+    font-family: "Trebuchet MS", sans-serif;
+}
+#apod-description{
+    color: white;
+    text-align: center;
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 18px; /* Slightly larger text for readability */
+    font-weight: 500; /* Medium boldness */
+    line-height: 1.6; /* Increases spacing for better readability */
+    background-color: rgba(255, 255, 255, 0.1); /* Light transparent background */
+    padding: 15px; /* Adds padding around text */
+    border-radius: 8px; /* Soft rounded corners */
+    max-width: 70%; /* Limits width for better text flow */
+    margin: 20px auto; /* Centers the text block */
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2); /* Adds a soft glow effect */
+}
+
+/* Error messages */
+.error-text {
+    color: red;
+    text-align: center;
+    font-family: "Trebuchet MS", sans-serif;
+}
+
+/* APOD Image */
+.apod-image {
+    display: block;
+    margin: 20px auto;
+    border-radius: 50px;
+    border: 3px dashed rgb(111, 108, 108); /* Dashed border around image */
+    padding: 10px; /* Adds space between image and border */
+}
+
+/* News Section */
+.news-list, .spacex-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.news-item, .spacex-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* News Titles and Mission Names */
+.news-title, .mission-name, .launch-date, .rocket-name {
+    color: #00bfff; /* Light blue for contrast */
+    font-family: "Trebuchet MS", sans-serif;
+}
+
+/* Dividers */
+.news-divider, .spacex-divider {
+    border: 1px solid gray;
+    width: 90%;
+    margin: 10px auto;
+}
+
+/* Change only the retrieved API text to green */
+.api-text {
+    color: white;
+    font-weight: bold;
+    font-family: "Trebuchet MS", sans-serif;
+}
+
+
+/*PROFILE*/
+/* Profile Page Container */
+.profile-container {
+    position: absolute;
+    top: 100px;
+    left: 600px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* Profile Card */
+/* Main container to center everything */
+.profile-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding-top: 50px;
+}
+
+/* Profile Card (Centered) */
+.profile-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+    text-align: center;
+    width: 400px;
+    border: 2px solid #00bfff; /* Light blue border */
+    margin-bottom: 20px; /* Space between profile card and upload form */
+}
+
+/* Username Styling */
+.profile-username {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+/* Bio Section */
+.profile-bio-title {
+    font-size: 18px;
+    color: #00bfff; /* Light blue */
+    margin-bottom: 5px;
+}
+
+.profile-bio {
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 8px;
+    border-radius: 6px;
+    text-align: center;
+    color: white;
+}
+
+/* Profile Form */
+.profile-form {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Bio Input Field */
+.profile-input {
+    width: 90%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #00bfff;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+/* Submit Button */
+.profile-submit-btn {
+    background-color: #00bfff;
+    color: black;
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.profile-submit-btn:hover {
+    background-color: #008ecc; /* Darker blue */
+    transform: scale(1.05);
+}
+
+/* Upload Form (Centered Below Profile Card) */
+.upload-form {
+    width: 200%;
+    max-width: 800px;
+    padding: 10px;
+    top: 500px;
+    left: 300px;
+    margin-top: 300px;
+    margin-left: -420px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Labels */
+.upload-label {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    display: block;
+    text-align: left;
+    width: 100%;
+}
+
+/* Textarea */
+.upload-textarea {
+    width: 90%;
+    height: 50px;
+    padding: 10px;
+    border: 2px solid #00bfff;
+    border-radius: 5px;
+    background-color: #1a1a1a;
+    color: white;
+    font-size: 14px;
+    resize: none;
+    outline: none;
+}
+
+.upload-textarea:focus {
+    border-color: #00ff7f;
+}
+
+/* File Inputs */
+.upload-input {
+    width: 90%;
+    padding: 10px;
+    border: 2px solid #00bfff;
+    border-radius: 5px;
+    background-color: #1a1a1a;
+    color: white;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+}
+
+.upload-input:hover {
+    border-color: #00ff7f;
+}
+
+/* Submit Button */
+.upload-submit-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00bfff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.upload-submit-btn:hover {
+    background-color: #00ff7f;
+}
+
+
+
+/*CHAT*/
+/* Chat Section */
+.chat-title {
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 15px;
+    font-family: "Source Code Pro", serif;
+}
+
+/* Chat Container - Groups Username, Message Box, and Timestamp */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px 0;
+    width: 300px;
+}
+
+/* Username Styling */
+.chat-username {
+    font-weight: bold;
+    color: #00bfff;
+    margin-bottom: 5px;
+}
+
+/* Chat Message Box */
+.chat-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.2);
+    width: auto;
+    max-width: 80%;
+}
+
+/* Chat Message */
+.chat-message {
+    color: white;
+    font-size: 14px;
+    word-wrap: break-word;
+}
+
+/* Timestamp Styling */
+.chat-timestamp {
+    font-size: 12px;
+    color: lightgray;
+    margin-top: 5px;
+}
+
+/* Chat Form */
+.chat-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+/* Chat Input Box */
+.chat-input {
+    width: 80%;
+    padding: 10px;
+    
+    border: 1px solid #00bfff;
+    border-radius: 50px;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+/* Chat Submit Button */
+.chat-submit-btn {
+    background-color: #00bfff;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.chat-submit-btn:hover {
+    background-color: #008ecc;
+    transform: scale(1.05);
+}
+
+
+/*FEED*/
+/* Feed Container */
+.feed-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+/* Feed List */
+.feed-list {
+    list-style-type: none;
+    padding: 0;
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Feed Item */
+.feed-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Feed Text */
+.feed-text {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Feed Image */
+.feed-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    display: block;
+    margin: 10px auto;
+}
+
+/* Feed Video */
+.feed-video {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    display: block;
+    margin: 10px auto;
+}
+
+/* Feed Divider */
+.feed-divider {
+    width: 100%;
+    border: 1px solid gray;
+    margin-top: 15px;
+}
+
+.current-user {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 10px 0;
+    width: 300px;
+    margin-left: auto;  /* Push div to the right */
+}
+.carousel-item img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+.intro {
+    color: #FFFFFF;
+}
+.don {
+    font-family: "Space Mono ",serif;
+    color: #a37f29;
+}
+.ph{
+    font-family: "Space Mono ",serif;
+    color: #d5cb8a;
+
+}
+.vi{
+    font-family: "Space Mono ",serif;
+    color: #d5cb8a;
+
+}

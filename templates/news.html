@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    News
+{% endblock %}
+
+{% block main %}
+    <div id="apod-section">
+        <h1 class="section-title">NASA Astronomy Picture of the Day</h1>
+        {% if apod.error %}
+            <p class="error-text">Error: {{ apod.error }}</p>
+        {% else %}
+            <h2 class="sub-title">{{ apod.title }}</h2>
+            <p class="description" id="apod-description">{{ apod.explanation }}</p>
+            <img class="apod-image" src="{{ apod.url }}" alt="NASA APOD" width="600" referrerpolicy="no-referrer">
+        {% endif %}
+    </div>
+
+    <div id="news-section">
+        <h1 class="section-title">Latest Space News</h1>
+        {% if news.error %}
+            <p class="error-text">Error: {{ news.error }}</p>
+        {% else %}
+            <ul class="news-list">
+                {% for article in news %}
+                    <li class="news-item">
+                        <strong class="news-title">{{ article.title }}</strong><br>
+                        <p class="news-summary">{{ article.summary }}</p>
+                        <small class="news-date">Published: {{ article.published_at }}</small>
+                    </li>
+                    <hr class="news-divider">
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+
+    <div id="spacex-section">
+        <h1 class="section-title">Upcoming SpaceX Launches</h1>
+        {% if spacex.error %}
+            <p class="error-text">Error: {{ spacex.error }}</p>
+        {% else %}
+            <ul class="spacex-list">
+                {% for launch in spacex %}
+                    <li class="spacex-item">
+                        <strong class="mission-name">Mission:</strong> <span class="api-text">{{ launch.name }}</span> <br>
+                        <strong class="launch-date">Launch Date:</strong> <span class="api-text">{{ launch.date_utc }}</span> <br>
+                        <strong class="rocket-name">Rocket:</strong> <span class="api-text">{{ launch.rocket }}</span> <br>
+                        <strong class="launch-details">Details:</strong> <span class="api-text">{{ launch.details or "No details available" }}</span> <br>
+
+                    </li>
+                    <hr class="spacex-divider">
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+{% endblock %}

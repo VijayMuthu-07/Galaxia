@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Chat
+{% endblock %}
+
+{% block main %}
+    <h2 class="chat-title">Discussion</h2>
+    {% for row in rows %}
+        <div class="chat-container {% if row.username == user %}current-user{% endif %}">
+            <p class="chat-username">{{ row.username }}</p>
+            <div class="chat-box">
+                <p class="chat-message">{{ row.data }}</p>
+            </div>
+            <p class="chat-timestamp">{{ row.pst }}</p>
+        </div>
+    {% endfor %}
+
+    <form action="/chat" method="post" class="chat-form">
+        <input name="chat" type="text" placeholder="Type your message..." class="chat-input">
+        <button class="chat-submit-btn">Post</button>
+    </form>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            window.scrollTo({top: document.body.scrollHeight, behavior:"smooth"});
+        });
+    </script>
+{% endblock %}

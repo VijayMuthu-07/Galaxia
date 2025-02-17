@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Homepage
+{% endblock %}
+
+{% block main %}
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-ride="carousel">
+        <!--<ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>-->
+        <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="3000">
+            <img class="d-block w-100 img-fluid" src="{{ url_for('static', filename='img3.jpg') }}" alt="First slide">
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+            <img class="d-block w-100 img-fluid" src="{{ url_for('static', filename='img2.jpg') }}" alt="Second slide">
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+            <img class="d-block w-100 img-fluid" src="{{ url_for('static', filename='img1.jpg') }}" alt="Third slide">
+        </div>
+        </div>
+        </a>
+    </div>
+    <hr>
+    <h2 class="don">Welcome to Galaxia</h2>
+    <p class="intro">Welcome to Galaxia!!! - your gateway to the cosmos! We're thrilled to have you onboard as part of our 
+        space-loving community. Now that you're all set up, dive right into engaging discussions in our forums with fellow 
+        space enthusiasts, share your thoughts, and explore fascinating topics. Don't forget to check out our News tab, 
+        where you'll find the latest and most exciting updates from the world of space exploration. 
+        Let's launch into new discoveries together!
+    </p>
+    <a class="btn btn-light" href="/chat" role="button">Disscussion</a>
+    <a class="btn btn-light" href="/news" role="button">News</a>
+{% endblock %}

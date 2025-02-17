@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Settings
+{% endblock %}
+
+{% block main %}
+    <h2 style="color: #FFFFFF;">Settings</h2>
+    <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link active" href="/change">Change Password</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="/about">About us</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/logout">Log out</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/delete">Delete Account</a>
+        </li>
+      </ul>
+{% endblock %}

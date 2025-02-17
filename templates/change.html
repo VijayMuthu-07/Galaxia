@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Change Password
+{% endblock %}
+
+{% block main %}
+    <div id = "panel">
+        <div class = "wrapper">
+            <h1 class="welcome">Change Password</h1>
+            <div class="login-container">
+                <form action="/change" method="post">
+                    <input name="oldpassword" type="password" placeholder="Old Password">
+                    <input name="newpassword" type="password" placeholder="New Password">
+                    <input name="confirmation" type="password" placeholder="re-type New Password">
+                    <button class="login-btn">Change Password</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

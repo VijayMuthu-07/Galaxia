@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Profile
+{% endblock %}
+
+{% block main %}
+    <div class="profile-container">
+        <div class="profile-card">
+            <h2 class="profile-username">Hello! {{ username }}</h2>
+
+            <h4 class="profile-bio-title">Bio</h4>
+            <p class="profile-bio">{{ bio }}</p>
+
+            <form action="/profile" method="post" class="profile-form">
+                <input class="profile-input" name="bio" type="text" placeholder="Write Bio">
+                <button class="profile-submit-btn">Submit</button>
+            </form>
+            
+        </div>
+    
+        <div class="upload-form">
+            <form action="/feed" method="post" enctype="multipart/form-data">
+
+                <label for="text" class="upload-label">Enter Text:</label>
+                <textarea id="text" name="text" class="upload-textarea" placeholder="Enter your text here"></textarea>
+
+                <label for="photo" class="upload-label">Upload Photo:</label>
+                <input type="file" id="photo" name="photo" accept="image/*" class="upload-input">
+
+                <label for="video" class="upload-label">Upload Video:</label>
+                <input type="file" id="video" name="video" accept="video/*" class="upload-input">
+
+                <button type="submit" class="upload-submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
